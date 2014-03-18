@@ -61,9 +61,10 @@ class Node(object):
         """
         #TODO: This should be in a transaction
 
-        #TODO: Create or update
-        self.neo4j_node = db.nodes.create()
-        self.neo4j_node.labels.add(self.__class__.__name__)
+        # Create or update
+        if self.url is None:
+            self.neo4j_node = db.nodes.create()
+            self.neo4j_node.labels.add(self.__class__.__name__)
 
         properties_by_class_name = self._get_fields_by_class()
         self._save_property_indexes(properties_by_class_name.get('Property', {}))
