@@ -5,7 +5,14 @@ A basic ORM for Neo4j in Python
 
 
 ##About
+
 The library is very basic right now, but is based off of Django's ORM.
+
+
+##Connecting to your Database
+
+In neorm4j.__init__, set db to whatever the URL might be as specified in
+https://neo4j-rest-client.readthedocs.org/en/latest/#getting-started
 
 
 ##Creating Objects
@@ -24,11 +31,13 @@ the Node owning that field.
 from neorm4j.models import Node
 from neorm4j.fields import Property, RelationshipTo
 
+
 class Person(Node):
 
     id = Property(index=True)
     hobby = Property()
     friend = RelationshipTo("Person", "knows")
+
 
 adam = Person(id=1)
 adam.hobby = 'Drums'
