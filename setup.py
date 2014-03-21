@@ -5,10 +5,10 @@ setup(
     version="0.0.1",
 
     description='A basic ORM for Neo4j',
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     author='Kyle Valade',
     author_email='kylevalade@gmail.com',
-    keywords='python, osm, open streetmap, neo4j',
+    keywords='python, neo4j',
     classifiers=[
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
