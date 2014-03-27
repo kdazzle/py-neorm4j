@@ -1,7 +1,7 @@
 py-neorm4j
 ==========
 
-A basic ORM for Neo4j in Python
+A basic ORM for Neo4j in Python. It's pretty much just an additional layer of abstraction around neo4jrestclient.
 
 
 ##About
